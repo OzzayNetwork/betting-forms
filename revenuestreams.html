@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+      
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+
+                <div class="header__logo hidden-sm-down">
+                    <h1><a href="index.html">Revenuesure Reconmate</a></h1>
+                </div>
+
+                
+            </header>
+
+            <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="img/county.png" alt="">
+                            <div>
+                                <div class="user__name">Fname Lname</div>
+                                <div class="user__email">email@email.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">View Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation text-capitalize">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a></li>
+
+                        <li><a href="revenuestreams.html"><i class="zmdi zmdi-money"></i> Revenue streams</a></li>
+
+                        <li><a href="reconmate.html"><i class="zmdi zmdi-swap"></i> reconmate</a></li>    
+                        
+                        <li><a href="mpesa.html"><i class="zmdi zmdi-smartphone-android"></i> Mpesa</a></li>   
+                        
+                        <li><a href="others.html"><i class="zmdi zmdi-apps"></i>others</a></li>   
+                        
+                        <li><a href="analysis.html"><i class="zmdi zmdi-trending-up"></i> analysis</a></li>  
+
+                        <li><a href="admin.html"><i class="zmdi zmdi-star-outline"></i>admin</a></li>  
+                        
+                        <li class="mt-5"><a href="reconmate.html"><i class="zmdi zmdi-power"></i> logout</a></li>    
+                        
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="content">
+                 <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mt-4 mx-4">Pool Table License</h4>
+                    <h6 class="card-subtitle mx-4">Table bellow shows a list of all pool table licenses</h6>
+                    <div class="row mx-4">
+                        <div class="col-12 p-0">
+                            <a href="forms.html" class="btn btn-primary btn-blue btn--icon-text ml-0 pl-0 text-white"><em class="zmdi zmdi-plus zmdi-hc-fw"></em> New License</a>
+                            <a href="forms.html" class="btn btn-secondary btn-success btn--icon-text mx-3"><i class="zmdi zmdi-refresh"></i> Renew License</a>
+                            <div class="p-0 m-0 float-right">
+                                <button class="btn btn-secondary btn-success btn--icon-text mx-3 upload-file"><i class="zmdi zmdi-file-add"></i> Upload File</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="data-table" class="table dataTable table-striped text-nowrap" role="grid">
+                            <thead class="thead-default text-capitalize">
+                                <tr>
+                                    <th>S/No</th>
+                                    <th>Control No</th>
+                                    <th>Business Name</th>
+                                    <th>Bid No</th>
+                                    <th>BCL</th>
+                                    <th>Type of License</th>
+                                    <th>Amount</th>
+                                    <th>Date Paid</th>
+                                    <th>Valid to</th>
+                                    <!--<th>Exceptions</th>
+                                    <th>Renewal</th>-->
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tfoot class="text-capitalize">
+                                <tr>
+                                    <th>S/No</th>
+                                    <th>Control No</th>
+                                    <th>Business Name</th>
+                                    <th>Bid No</th>
+                                    <th>BCL</th>
+                                    <th>Type of License</th>
+                                    <th>Amount</th>
+                                    <th>Date Paid</th>
+                                    <th>Valid to</th>
+                                    <!--<th>Exceptions</th>
+                                    <th>Renewal</th>-->
+                                    <th>Actions</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>7777</td>
+                                    <td>3222</td>
+                                    <td class="biz-name">OYUGIS TATA BETTING</td>
+                                    <td>1374545</td>
+                                    <td>04955</td>
+                                    <td></td>
+                                    <td>KES 30,000.00</td>
+                                    <td>11 June 2019</td>
+                                    <td>01 June 2019</td>
+                                    <!--<td></td>
+                                    <td><label class="label label-primary">Renewal Permit</label></td>-->
+                                    <td>
+                                        <div class="actions row-actions">
+                                            <!--				  printing-->
+                                            <span><a class="actions__item zmdi zmdi-print" href="print-license.html" title="print this permit" target="new"></a></span>
+                                            <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                                            <!--				  view-->
+                                            <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                                            <!--				  delete-->
+                                            <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                                        </div>
+                    </div>
+
+                    </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>8974</td>
+                        <td>3111</td>
+                        <td class="biz-name">KOROGA VILLAGE LIMITED</td>
+                        <td>1373979</td>
+                        <td>04956</td>
+                        <td></td>
+                        <td>KES 30,000.00</td>
+                        <td>11 June 2019</td>
+                        <td>01 June 2019</td>
+                        <!--<td></td>
+                        <td><label class="label label-primary">Renewal Permit</label></td>-->
+                        <td>
+                            <div class="actions row-actions">
+                                <!--				  printing-->
+                                <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                                <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                                <!--				  view-->
+                                <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                                <!--				  delete-->
+                                <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                            </div>
+                </div>
+
+                </td>
+
+                </tr>
+
+                <tr>
+                    <td>7856</td>
+                    <td>3444</td>
+                    <td class="biz-name">CHAPANISHA LOGISTICS LIMITED</td>
+                    <td>1385479</td>
+                    <td>04155</td>
+                    <td></td>
+                    <td>KES 30,000.00</td>
+                    <td>11 June 2019</td>
+                    <td>01 June 2019</td>
+                    <!--<td></td>
+                    <td><label class="label label-primary">Renewal Permit</label></td>-->
+                    <td>
+                        <div class="actions row-actions">
+                            <!--				  printing-->
+                            <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                            <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                            <!--				  view-->
+                            <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                            <!--				  delete-->
+                            <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                        </div>
+            </div>
+
+            </td>
+
+            </tr>
+
+            <tr>
+                <td>3145</td>
+                <td>3333</td>
+                <td class="biz-name">TINGA MBAYA CO-OPERATIVES</td>
+                <td>1234567</td>
+                <td>04985</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1552</td>
+                <td>3555</td>
+                <td class="biz-name">KYTR SWERTY</td>
+                <td>7654123</td>
+                <td>04255</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>2562</td>
+                <td>6663</td>
+                <td class="biz-name">Ozzay BETGENIUS</td>
+                <td>1385652</td>
+                <td>12345</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>2222</td>
+                <td>3368</td>
+                <td class="biz-name">LEMASO BROTHERS</td>
+                <td>1845979</td>
+                <td>00005</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>4452</td>
+                <td>3475</td>
+                <td class="biz-name">KEVO KINYANDUZI LIMITED</td>
+                <td>1384569</td>
+                <td>14955</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>0305</td>
+                <td>3421</td>
+                <td class="biz-name">BRAYO CO-OPERATIVES</td>
+                <td>1852979</td>
+                <td>04655</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>0922</td>
+                <td>33689</td>
+                <td class="biz-name">QWERTZ LIMITED</td>
+                <td>1345879</td>
+                <td>21955</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1032</td>
+                <td>3367</td>
+                <td class="biz-name">AZERTY LIMITED</td>
+                <td>7895679</td>
+                <td>045655</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1462</td>
+                <td>3370</td>
+                <td class="biz-name">TECNO BET</td>
+                <td>1784519</td>
+                <td>12365</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1792</td>
+                <td>3344</td>
+                <td class="biz-name">Ozzay brews</td>
+                <td>1134568</td>
+                <td>04974</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1442</td>
+                <td>3999</td>
+                <td class="biz-name">PURPOSE MONEYMAKERS</td>
+                <td>1300009</td>
+                <td>04055</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1232</td>
+                <td>3845</td>
+                <td class="biz-name">CHEMOSI KISINGITI LIMITED</td>
+                <td>1378959</td>
+                <td>012235</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1561</td>
+                <td>3456</td>
+                <td class="biz-name">IZOH CLIBET</td>
+                <td>1789679</td>
+                <td>04964</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1554</td>
+                <td>8754</td>
+                <td class="biz-name">Ozzay BETWINK</td>
+                <td>1456279</td>
+                <td>22335</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1553</td>
+                <td>3312</td>
+                <td class="biz-name">AZUZU LIMITED</td>
+                <td>1553153</td>
+                <td>33125</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1852</td>
+                <td>4321</td>
+                <td class="biz-name">TAPO DAKTARI</td>
+                <td>1352648</td>
+                <td>22225</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>2552</td>
+                <td>4123</td>
+                <td class="biz-name">SCOOBY DOO</td>
+                <td>1888889</td>
+                <td>08985</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1352</td>
+                <td>3987</td>
+                <td class="biz-name">LILO & STITCH</td>
+                <td>1748579</td>
+                <td>98521</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>1872</td>
+                <td>3425</td>
+                <td class="biz-name">BETPARTNERS</td>
+                <td>1397899</td>
+                <td>65555</td>
+                <td></td>
+                <td>KES 30,000.00</td>
+                <td>11 June 2019</td>
+                <td>01 June 2019</td>
+                <!--<td></td>
+                <td><label class="label label-primary">Renewal Permit</label></td>-->
+                <td>
+                    <div class="actions row-actions">
+                        <!--				  printing-->
+                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
+                        <!--				  download-->
+<!--<!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                        <!--				  view-->
+                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="Edit This license"></i></span></a>
+                        <!--				  delete-->
+                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            </tbody>
+
+            </table>
+            </div>
+            </div>
+            </div>
+
+                
+
+                <footer class="footer hidden-xs-down">
+                    <p>© Revenuesure. All rights reserved.</p>
+
+                   
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+           
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+        <!-- Vendors: Data tables -->
+        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+        <script src="vendors/jszip/jszip.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+
+</html>

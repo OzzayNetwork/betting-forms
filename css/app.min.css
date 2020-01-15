@@ -13704,3 +13704,9 @@ thead tr, tfoot tr{
 }
 
 
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: -.35rem;
+}
