@@ -646,7 +646,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: fixed;
     background: #fff;
     height: calc(100% - 70px);
-    top: 70px;
+/*    top: 70px;*/
     transition: all;
     -webkit-transition-duration: .3s;
     transition-duration: .3s;

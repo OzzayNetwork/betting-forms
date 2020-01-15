@@ -10082,7 +10082,8 @@ opacity:1
     padding: 102px 2rem .5rem;
     height: 100%;
     overflow: hidden;
-    z-index: 19
+    z-index: 19;
+/*	padding-top: 30px;*/
 }
 .navigation>li>a, .navigation__sub .navigation__active, .user {
     position: relative
