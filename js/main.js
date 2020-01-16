@@ -58,4 +58,23 @@ $(document).ready(function () {
 	
 	
 	
+//	getting months and dates
+	var todayis=moment().format("dddd, MMM Do YY");
+	var thismonth=moment().format("MMMM");
+	var thisyear=moment().format("YYYY");
+	var nextyear=moment().add(1,'years').format("YYYY");
+	var lastyear=moment().subtract(1,'years').format("YYYY");
+	$('.today').text(todayis);
+	$('.this-month').text(thismonth);
+	
+	if(thismonth=='july'){
+		$('.this_year').text(thisyear+'/'+nextyear);
+	}
+	else{
+		$('.this_year').text(lastyear+'/'+thisyear);
+	}
+	
+	
+	
+	
 });

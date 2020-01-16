@@ -13767,6 +13767,7 @@ thead tr, tfoot tr{
 
 .graph-btns button{
 	border: 1px solid;
+	border-radius: 3px;
 }
 
 .height-calc23{
