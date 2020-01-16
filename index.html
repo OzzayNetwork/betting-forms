@@ -1,1307 +1,620 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
 <head>
-    <meta charset="utf-8">
-    <title>NCCG | Betting</title>
-    <!-- Vendor styles -->
-    <link rel="stylesheet" href="css/dropify2.css">
-    <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
-    <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
-    <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css">
-    <!-- Vendor styles -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/app.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
 
-<body>
-    <div class="main">
-        <header class="header">
-            <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
-                <div class="navigation-trigger__inner"> <i class="navigation-trigger__line"></i> <i class="navigation-trigger__line"></i> <i class="navigation-trigger__line"></i> </div>
-            </div>
-            <div class="header__logo hidden-sm-down">
-                <h1><a href="http://localhost/finance/public/finance" class="text-capitalize">NCCG<br>Betting Control and Lincensing Board</a></h1>
-            </div>
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
 
-             <form class="search">
-                    <div class="search__inner">
-                        <input type="text" class="search__text" placeholder="verrify a transaction">
-                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
-                    </div>
-                </form>
-
-                <ul class="top-nav">
-                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
-<!--
-
-                    <li class="dropdown d-none">
-                        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-email"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
-                            <div class="listview listview--hover">
-                                <div class="listview__header">
-                                    Messages
-
-                                    <div class="actions">
-                                        <a href="messages.html" class="actions__item zmdi zmdi-plus"></a>
-                                    </div>
-                                </div>
-
-                                <a href="#" class="listview__item">
-                                    <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-                                    <div class="listview__content">
-                                        <div class="listview__heading">
-                                            David Belle <small>12:01 PM</small>
-                                        </div>
-                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-                                    <div class="listview__content">
-                                        <div class="listview__heading">
-                                            Jonathan Morris
-                                            <small>02:45 PM</small>
-                                        </div>
-                                        <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                                    <div class="listview__content">
-                                        <div class="listview__heading">
-                                            Fredric Mitchell Jr.
-                                            <small>08:21 PM</small>
-                                        </div>
-                                        <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
-
-                                    <div class="listview__content">
-                                        <div class="listview__heading">
-                                            Glenn Jecobs
-                                            <small>08:43 PM</small>
-                                        </div>
-                                        <p>Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-                                    <div class="listview__content">
-                                        <div class="listview__heading">
-                                            Bill Phillips
-                                            <small>11:32 PM</small>
-                                        </div>
-                                        <p>Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="view-more">View all messages</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown top-nav__notifications">
-                        <a href="#" data-toggle="dropdown" class="top-nav__notify">
-                            <i class="zmdi zmdi-notifications"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
-                            <div class="listview listview--hover">
-                                <div class="listview__header">
-                                    Notifications
-
-                                    <div class="actions">
-                                        <a href="#" class="actions__item zmdi zmdi-check-all" data-ma-action="notifications-clear"></a>
-                                    </div>
-                                </div>
-
-                                <div class="listview__scroll scrollbar-inner">
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">David Belle</div>
-                                            <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Jonathan Morris</div>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Fredric Mitchell Jr.</div>
-                                            <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Glenn Jecobs</div>
-                                            <p>Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Bill Phillips</div>
-                                            <p>Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">David Belle</div>
-                                            <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Jonathan Morris</div>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="listview__item">
-                                        <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Fredric Mitchell Jr.</div>
-                                            <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="p-1"></div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown hidden-xs-down">
-                        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-check-circle"></i></a>
-
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
-                            <div class="listview listview--hover">
-                                <div class="listview__header">Tasks</div>
-
-                                <a href="#" class="listview__item">
-                                    <div class="listview__content">
-                                        <div class="listview__heading mb-2">HTML5 Validation Report</div>
-
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <div class="listview__content">
-                                        <div class="listview__heading mb-2">Google Chrome Extension</div>
-
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <div class="listview__content">
-                                        <div class="listview__heading mb-2">Social Intranet Projects</div>
-
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <div class="listview__content">
-                                        <div class="listview__heading mb-2">Bootstrap Admin Template</div>
-
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="listview__item">
-                                    <div class="listview__content">
-                                        <div class="listview__heading mb-2">Youtube Client App</div>
-
-                                        <div class="progress">
-                                            <div class="progress-bar bg-danger" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="view-more">View all tasks</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown hidden-xs-down">
-                        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-apps"></i></a>
-
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
-                            <div class="row app-shortcuts">
-                                <a class="col-4 app-shortcuts__item" href="#">
-                                    <i class="zmdi zmdi-calendar"></i>
-                                    <small class="">Calendar</small>
-                                    <span class="app-shortcuts__helper bg-red"></span>
-                                </a>
-                                <a class="col-4 app-shortcuts__item" href="#">
-                                    <i class="zmdi zmdi-file-text"></i>
-                                    <small class="">Files</small>
-                                    <span class="app-shortcuts__helper bg-blue"></span>
-                                </a>
-                                <a class="col-4 app-shortcuts__item" href="#">
-                                    <i class="zmdi zmdi-email"></i>
-                                    <small class="">Email</small>
-                                    <span class="app-shortcuts__helper bg-teal"></span>
-                                </a>
-                                <a class="col-4 app-shortcuts__item" href="#">
-                                    <i class="zmdi zmdi-trending-up"></i>
-                                    <small class="">Reports</small>
-                                    <span class="app-shortcuts__helper bg-blue-grey"></span>
-                                </a>
-                                <a class="col-4 app-shortcuts__item" href="#">
-                                    <i class="zmdi zmdi-view-headline"></i>
-                                    <small class="">News</small>
-                                    <span class="app-shortcuts__helper bg-orange"></span>
-                                </a>
-                                <a class="col-4 app-shortcuts__item" href="#">
-                                    <i class="zmdi zmdi-image"></i>
-                                    <small class="">Gallery</small>
-                                    <span class="app-shortcuts__helper bg-light-green"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown hidden-xs-down">
-                        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-item theme-switch">
-                                Theme Switch
-
-                                <div class="btn-group btn-group-toggle btn-group--colors" data-toggle="buttons">
-                                    <label class="btn bg-green active"><input type="radio" value="green" autocomplete="off" checked></label>
-                                    <label class="btn bg-blue"><input type="radio" value="blue" autocomplete="off"></label>
-                                    <label class="btn bg-red"><input type="radio" value="red" autocomplete="off"></label>
-                                    <label class="btn bg-orange"><input type="radio" value="orange" autocomplete="off"></label>
-                                    <label class="btn bg-teal"><input type="radio" value="teal" autocomplete="off"></label>
-
-                                    <div class="clearfix mt-2"></div>
-
-                                    <label class="btn bg-cyan"><input type="radio" value="cyan" autocomplete="off"></label>
-                                    <label class="btn bg-blue-grey"><input type="radio" value="blue-grey" autocomplete="off"></label>
-                                    <label class="btn bg-purple"><input type="radio" value="purple" autocomplete="off"></label>
-                                    <label class="btn bg-indigo"><input type="radio" value="indigo" autocomplete="off"></label>
-                                    <label class="btn bg-brown"><input type="radio" value="brown" autocomplete="off"></label>
-                                </div>
-                            </div>
-                            <a href="#" class="dropdown-item">Fullscreen</a>
-                            <a href="#" class="dropdown-item">Clear Local Storage</a>
-                        </div>
-                    </li>
--->
-
-                    <li class="hidden-xs-down d-none">
-                        <a href="#" data-ma-action="aside-open" data-ma-target=".chat" class="top-nav__notify">
-                            <i class="zmdi zmdi-comment-alt-text"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            <ul class="top-nav">
-                <li class="hidden-xs-down d-none">
-                    <a href="#" data-ma-action="aside-open" data-ma-target=".chat" class="top-nav__notify"> <i class="zmdi zmdi-comment-alt-text"></i> </a>
-                </li>
-            </ul>
-        </header>
-    </div>
-    <section id="content">
-        <!--		form container-->
-        <aside class="chat" id="new-application">
-            <div class="chat__header px-4">
-                <h2 class="chat__title mb-3">New License <small>Correctly fill all fields for the new application</small></h2>
-            </div>
-            <div class="scrollbar-inner">
-                <div class="px-4 pt-1 height-100150">
-                    <form class="contact100-form validate-form p-0 border-top">
-                        <!--		enter		business name-->
-                        <label class="label-input100 mb-2" for="business_name">Business Name *</label>
-                        <div class="wrap-input100 validate-input" data-validate="Type Business Name">
-                            <input id="business_name" class="input100" type="text" name="business_name" placeholder="Enter name of the business" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--		enter		business name-->
-
-                        <!--		enter		business numbver-->
-                        <label class="label-input100 mb-2" for="bid_number">Business Number *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Type Business Name">
-                            <input id="bid_number" class="input100" type="text" name="bid_number" placeholder="Business Number" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--		business number-->
-
-                        <!--				physical address-->
-                        <label class="label-input100 mb-2" for="physical_address">Business Location Details *</label>
-                        <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-                            <input id="physical_address" class="input100" type="text" name="physical_address" placeholder="Physical address">
-                            <span class="focus-input100"></span> </div>
-                        <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                            <input class="input100" type="text" name="plot_number" id="plot_number" placeholder="Plot Number">
-                            <span class="focus-input100"></span> </div>
-                        <!--				physical address-->
-                        <hr class="w-100 +">
-                        <!--		type -->
-                        <label class="label-input100 mb-2" for="schedule_id">License type *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Type Business Name">
-                            <select name="schedule_id" id="schedule_id" class="input100" required>
-              <option value="36">Select license type</option>
-              <option value="38">General Retail Alcoholic Drink License (Off License Retailers) wines and spirits.</option>
-              <option value="38">General Retail Alcoholic Drink License (Off License Retailers) wines and spirits.</option>
-              <option value="38">General Retail Alcoholic Drink License (Off License Retailers) wines and spirits.</option>
-            </select>
-                            <span class="focus-input100"></span> </div>
-                        <!--		type -->
-                        <label class="label-input100 mb-2" for="date_paid">Date paid *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Select a date">
-                            <input id="date_paid" class="input100 date-picker" type="text" name="date_paid" placeholder="select date" required>
-                            <span class="focus-input100"></span> </div>
-
-                        <!--			date from-->
-                        <label class="label-input100 mb-2" for="valid_from">Valid from *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Select a date">
-                            <input id="valid_from" class="input100 date-picker" type="text" name="valid_from" placeholder="select date" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--			date to-->
-                        <hr class="w-100 +">
-                        <!--			date from-->
-                        <label class="label-input100 mb-2" for="amount">amount</label>
-                        <div class="wrap-input100  validate-input" data-validate="Select a date">
-                            <input id="amount" class="input100 text-right" type="number" name="amount" placeholder="Enter amount paid" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--			date to-->
-
-                        <div class="container-contact100-form-btn w-100 ">
-                            <button class="contact100-form-btn w-100"> Send Message </button>
-                        </div>
-                    </form>
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
                 </div>
-
             </div>
-            <a href="messages.html" class="btn btn--action btn-danger d-none"><i class="zmdi zmdi-plus"></i></a> </aside>
 
-
-        <!--	license renewals-->
-        <aside class="renew" id="renew-application">
-            <div class="chat__header px-4">
-                <h2 class="chat__title mb-3">License Renewal<small>Correctly fill all fields for the license renewal being applied for</small></h2>
-            </div>
-            <div class="scrollbar-inner">
-                <div class="px-4 pt-1 height-100150">
-                    <form class="contact100-form validate-form p-0 border-top">
-                        <!--		enter		business name-->
-                        <label class="label-input100 mb-2" for="business_name">Business Name *</label>
-                        <div class="wrap-input100 validate-input" data-validate="Type Business Name">
-                            <input id="business_name" class="input100" type="text" name="business_name" placeholder="Enter name of the business" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--		enter		business name-->
-
-                        <!--		enter		business numbver-->
-                        <label class="label-input100 mb-2" for="bid_number">Business Number *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Type Business Name">
-                            <input id="bid_number" class="input100" type="text" name="bid_number" placeholder="Business Number" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--		business number-->
-
-                        <!--				physical address-->
-                        <label class="label-input100 mb-2" for="physical_address">Business Location Details *</label>
-                        <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-                            <input id="physical_address" class="input100" type="text" name="physical_address" placeholder="Physical address">
-                            <span class="focus-input100"></span> </div>
-                        <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                            <input class="input100" type="text" name="plot_number" id="plot_number" placeholder="Plot Number">
-                            <span class="focus-input100"></span> </div>
-                        <!--				physical address-->
-                        <hr class="w-100 +">
-                        <!--		type -->
-                        <label class="label-input100 mb-2" for="schedule_id">License type *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Type Business Name">
-                            <select name="schedule_id" id="schedule_id" class="input100" required>
-              <option value="36">Select license type</option>
-              <option value="38">General Retail Alcoholic Drink License (Off License Retailers) wines and spirits.</option>
-              <option value="38">General Retail Alcoholic Drink License (Off License Retailers) wines and spirits.</option>
-              <option value="38">General Retail Alcoholic Drink License (Off License Retailers) wines and spirits.</option>
-            </select>
-                            <span class="focus-input100"></span> </div>
-                        <!--		type -->
-                        <label class="label-input100 mb-2" for="date_paid">Date paid *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Select a date">
-                            <input id="date_paid" class="input100 date-picker" type="text" name="date_paid" placeholder="select date" required>
-                            <span class="focus-input100"></span> </div>
-
-                        <!--			date from-->
-                        <label class="label-input100 mb-2" for="valid_from">Valid from *</label>
-                        <div class="wrap-input100  validate-input" data-validate="Select a date">
-                            <input id="valid_from" class="input100 date-picker" type="text" name="valid_from" placeholder="select date" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--			date to-->
-                        <hr class="w-100 +">
-                        <!--			date from-->
-                        <label class="label-input100 mb-2" for="amount">amount</label>
-                        <div class="wrap-input100  validate-input" data-validate="Select a date">
-                            <input id="amount" class="input100 text-right" type="number" name="amount" placeholder="Enter amount paid" required>
-                            <span class="focus-input100"></span> </div>
-                        <!--			date to-->
-
-                        <div class="container-contact100-form-btn w-100 ">
-                            <button class="contact100-form-btn w-100"> Save </button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-            <a href="messages.html" class="btn btn--action btn-danger d-none"><i class="zmdi zmdi-plus"></i></a> </aside>
-        <!--	license renewals-->
-        <!--		form container-->
-
-        <!--	datatable-->
-        <section class="content p-4">
-            <header class="content__title">
-                <h1>DATA TABLES</h1>
-                <div class="actions">
-                    <a href="#" class="actions__item zmdi zmdi-trending-up"></a>
-                    <a href="#" class="actions__item zmdi zmdi-check-all"></a>
-                    <div class="dropdown actions__item"> <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
-                        <div class="dropdown-menu dropdown-menu-right"> <a href="#" class="dropdown-item">Refresh</a> <a href="#" class="dropdown-item">Manage Widgets</a> <a href="#" class="dropdown-item">Settings</a> </div>
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
                     </div>
                 </div>
+
+                <div class="header__logo hidden-sm-down">
+                    <h1><a href="index.html">Revenuesure Reconmate</a></h1>
+                </div>
+
+                
             </header>
-            <div class="card">
-                <div class="card-body p-0">
-                    <h4 class="card-title mt-4 mx-4">Licenses Due</h4>
-                    <h6 class="card-subtitle mx-4">The table below contains a record of all Alcohol licenses available in Nairobi County</h6>
-                    <div class="row mx-4">
-                        <div class="col-12 p-0">
-                            <button class="btn btn-primary btn-blue btn--icon-text ml-0 pl-0" data-ma-action="aside-open" data-ma-target=".chat" class="top-nav__notify">
-        <em class="zmdi zmdi-plus zmdi-hc-fw"></em> New License
-        </button>
-                            <button class="btn btn-secondary btn-success btn--icon-text mx-3" data-ma-action="aside-open" data-ma-target=".renew"><i class="zmdi zmdi-refresh"></i> Renew License</button>
-                            <div class="p-0 m-0 float-right">
 
-                                <button class="btn btn-secondary btn-success btn--icon-text mx-3 upload-file"><i class="zmdi zmdi-file-add"></i> Upload File</button>
+            <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
+                            <div>
+                                <div class="user__name">Malinda Hollaway</div>
+                                <div class="user__email">malinda-h@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">View Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-view-week"></i> Variants</a>
+
+                            <ul>
+                                <li><a href="hidden-sidebar.html">Hidden Sidebar</a></li>
+                                <li><a href="boxed-layout.html">Boxed Layout</a></li>
+                                <li><a href="hidden-sidebar-boxed-layout.html">Boxed Layout with Hidden Sidebar</a></li>
+                                <li><a href="top-navigation.html">Top Navigation</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="typography.html"><i class="zmdi zmdi-format-underlined"></i> Typography</a></li>
+
+                        <li><a href="widgets.html"><i class="zmdi zmdi-widgets"></i> Widgets</a></li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-view-list"></i> Tables</a>
+
+                            <ul>
+                                <li><a href="html-table.html">HTML Table</a></li>
+                                <li><a href="data-table.html">Data Table</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-collection-text"></i> Forms</a>
+
+                            <ul>
+                                <li><a href="form-elements.html">Basic Form Elements</a></li>
+                                <li><a href="form-components.html">Form Components</a></li>
+                                <li><a href="form-layouts.html">Form Layouts</a></li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-swap-alt"></i> User Interface</a>
+
+                            <ul>
+                                <li><a href="colors.html">Colors</a></li>
+                                <li><a href="css-animations.html">CSS Animations</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="icons.html">Icons</a></li>
+                                <li><a href="listview.html">Listview</a></li>
+                                <li><a href="toolbars.html">Toolbars</a></li>
+                                <li><a href="cards.html">Cards</a></li>
+                                <li><a href="alerts.html">Alerts</a></li>
+                                <li><a href="badges.html">Badges</a></li>
+                                <li><a href="breadcrumbs.html">Bredcrumbs</a></li>
+                                <li><a href="jumbotron.html">Jumbotron</a></li>
+                                <li><a href="navs.html">Navs</a></li>
+                                <li><a href="pagination.html">Pagination</a></li>
+                                <li><a href="progress.html">Progress</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-group-work"></i> Javascript Components</a>
+
+                            <ul class="navigation__sub">
+                                <li><a href="carousel.html">Carousel</a></li>
+                                <li><a href="collapse.html">Collapse</a></li>
+                                <li><a href="dropdowns.html">Dropdowns</a></li>
+                                <li><a href="modals.html">Modals</a></li>
+                                <li><a href="popover.html">Popover</a></li>
+                                <li><a href="tabs.html">Tabs</a></li>
+                                <li><a href="tooltips.html">Tooltips</a></li>
+                                <li><a href="notifications-alerts.html">Notifications & Alerts</a></li>
+                                <li><a href="tree-view.html">Tree View</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-trending-up"></i> Charts</a>
+
+                            <ul>
+                                <li><a href="flot-charts.html">Flot</a></li>
+                                <li><a href="other-charts.html">Other Charts</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="calendar.html"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
+
+                        <li><a href="photo-gallery.html"><i class="zmdi zmdi-image"></i> Photo Gallery</a></li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-collection-item"></i> Sample Pages</a>
+
+                            <ul>
+                                <li><a href="profile-about.html">Profile</a></li>
+                                <li><a href="messages.html">Messages</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="new-contact.html">New Contact</a></li>
+                                <li><a href="groups.html">Groups</a></li>
+                                <li><a href="pricing-tables.html">Pricing Tables</a></li>
+                                <li><a href="invoice.html">Invoice</a></li>
+                                <li><a href="todo-lists.html">Todo Lists</a></li>
+                                <li><a href="notes.html">Notes</a></li>
+                                <li><a href="search-results.html">Search Results</a></li>
+                                <li><a href="issue-tracker.html">Issue Tracker</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="questions-answers.html">Questions & Answers</a></li>
+                                <li><a href="questions-answers-details.html">Questions & Answers Details</a></li>
+                                <li><a href="login.html">Login & SignUp</a></li>
+                                <li><a href="lockscreen.html">Lockscreen</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="empty.html">Empty Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            
+
+            <section class="content">
+                <header class="content__title">
+                    <h1>Dashboard</h1>
+                    <small>License applications and revenue summary</small>
+                </header>
+
+                <div class="row quick-stats">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="quick-stats__item bg-greenlt">
+                            <div class="quick-stats__info">
+								<small class="border-0 mt-0 mb-3 text-uppercase">Licences created today</small>
+                                <h2>52,020</h2>
+                                <small class="today">today</small>
                             </div>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table id="data-table" class="table dataTable table-striped text-nowrap" role="grid">
-                            <thead class="thead-default text-capitalize">
-                                <tr>
-                                    <th>S/No</th>
-                                    <th>Control No</th>
-                                    <th>Business Name</th>
-                                    <th>Bid No</th>
-                                    <th>BCL</th>
-                                    <th>Type of License</th>
-                                    <th>Amount</th>
-                                    <th>Date Paid</th>
-                                    <th>Valid From</th>
-                                    <!--<th>Exceptions</th>
-                                    <th>Renewal</th>-->
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tfoot class="text-capitalize">
-                                <tr>
-                                    <th>S/No</th>
-                                    <th>Control No</th>
-                                    <th>Business Name</th>
-                                    <th>Bid No</th>
-                                    <th>BCL</th>
-                                    <th>Type of License</th>
-                                    <th>Amount</th>
-                                    <th>Date Paid</th>
-                                    <th>Valid From</th>
-                                    <!--<th>Exceptions</th>
-                                    <th>Renewal</th>-->
-                                    <th>Actions</th>
-                                </tr>
-                            </tfoot>
-                            <tbody>
-                                <tr>
-                                    <td>7777</td>
-                                    <td>3222</td>
-                                    <td class="biz-name">OYUGIS TATA BETTING</td>
-                                    <td>1374545</td>
-                                    <td>04955</td>
-                                    <td></td>
-                                    <td>KES 30,000.00</td>
-                                    <td>11 June 2019</td>
-                                    <td>01 June 2019</td>
-                                    <!--<td></td>
-                                    <td><label class="label label-primary">Renewal Permit</label></td>-->
-                                    <td>
-                                        <div class="actions row-actions">
-                                            <!--				  printing-->
-                                            <span><a class="actions__item zmdi zmdi-print" href="print-license.html" title="print this permit" target="new"></a></span>
-                                            <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                                            <!--				  view-->
-                                            <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                                            <!--				  delete-->
-                                            <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                                        </div>
-                    </div>
 
-                    </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>8974</td>
-                        <td>3111</td>
-                        <td class="biz-name">KOROGA VILLAGE LIMITED</td>
-                        <td>1373979</td>
-                        <td>04956</td>
-                        <td></td>
-                        <td>KES 30,000.00</td>
-                        <td>11 June 2019</td>
-                        <td>01 June 2019</td>
-                        <!--<td></td>
-                        <td><label class="label label-primary">Renewal Permit</label></td>-->
-                        <td>
-                            <div class="actions row-actions">
-                                <!--				  printing-->
-                                <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                                <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                                <!--				  view-->
-                                <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                                <!--				  delete-->
-                                <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="quick-stats__item bg-darkgreen">
+                            <div class="quick-stats__info">
+								 <small class="border-0 mt-0 mb-3 text-uppercase">license due expiry today</small>
+                                <h2>23,589</h2>
+                                <small class="today">today</small>
                             </div>
-                </div>
-
-                </td>
-
-                </tr>
-
-                <tr>
-                    <td>7856</td>
-                    <td>3444</td>
-                    <td class="biz-name">CHAPANISHA LOGISTICS LIMITED</td>
-                    <td>1385479</td>
-                    <td>04155</td>
-                    <td></td>
-                    <td>KES 30,000.00</td>
-                    <td>11 June 2019</td>
-                    <td>01 June 2019</td>
-                    <!--<td></td>
-                    <td><label class="label label-primary">Renewal Permit</label></td>-->
-                    <td>
-                        <div class="actions row-actions">
-                            <!--				  printing-->
-                            <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                            <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                            <!--				  view-->
-                            <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                            <!--				  delete-->
-                            <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
                         </div>
-            </div>
-
-            </td>
-
-            </tr>
-
-            <tr>
-                <td>3145</td>
-                <td>3333</td>
-                <td class="biz-name">TINGA MBAYA CO-OPERATIVES</td>
-                <td>1234567</td>
-                <td>04985</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
                     </div>
 
-                </td>
-
-            </tr>
-            <tr>
-                <td>1552</td>
-                <td>3555</td>
-                <td class="biz-name">KYTR SWERTY</td>
-                <td>7654123</td>
-                <td>04255</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="quick-stats__item bg-greenlt">
+                            <div class="quick-stats__info">
+								<small class="border-0 mt-0 mb-3 text-uppercase">Monthly revenue</small>
+                                <h2>Kes 252,369</h2>
+                                <small class="this-month text-capitalize">this month</small>
+                            </div>
+                        </div>
                     </div>
 
-                </td>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="quick-stats__item bg-darkgreen">
+                            <div class="quick-stats__info">
+								<small class="border-0 mt-0 mb-3 text-uppercase">Fiscal year earnings</small>
+                                <h2>Kes 692,589</h2>
+                                <small class="this_year text-capitalize">2019/2020</small>
+                            </div>
 
-            </tr>
-            <tr>
-                <td>2562</td>
-                <td>6663</td>
-                <td class="biz-name">Ozzay BETGENIUS</td>
-                <td>1385652</td>
-                <td>12345</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                       </div>
                     </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>2222</td>
-                <td>3368</td>
-                <td class="biz-name">LEMASO BROTHERS</td>
-                <td>1845979</td>
-                <td>00005</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>4452</td>
-                <td>3475</td>
-                <td class="biz-name">KEVO KINYANDUZI LIMITED</td>
-                <td>1384569</td>
-                <td>14955</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>0305</td>
-                <td>3421</td>
-                <td class="biz-name">BRAYO CO-OPERATIVES</td>
-                <td>1852979</td>
-                <td>04655</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>0922</td>
-                <td>33689</td>
-                <td class="biz-name">QWERTZ LIMITED</td>
-                <td>1345879</td>
-                <td>21955</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1032</td>
-                <td>3367</td>
-                <td class="biz-name">AZERTY LIMITED</td>
-                <td>7895679</td>
-                <td>045655</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1462</td>
-                <td>3370</td>
-                <td class="biz-name">TECNO BET</td>
-                <td>1784519</td>
-                <td>12365</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1792</td>
-                <td>3344</td>
-                <td class="biz-name">Ozzay brews</td>
-                <td>1134568</td>
-                <td>04974</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1442</td>
-                <td>3999</td>
-                <td class="biz-name">PURPOSE MONEYMAKERS</td>
-                <td>1300009</td>
-                <td>04055</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1232</td>
-                <td>3845</td>
-                <td class="biz-name">CHEMOSI KISINGITI LIMITED</td>
-                <td>1378959</td>
-                <td>012235</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1561</td>
-                <td>3456</td>
-                <td class="biz-name">IZOH CLIBET</td>
-                <td>1789679</td>
-                <td>04964</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1554</td>
-                <td>8754</td>
-                <td class="biz-name">Ozzay BETWINK</td>
-                <td>1456279</td>
-                <td>22335</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1553</td>
-                <td>3312</td>
-                <td class="biz-name">AZUZU LIMITED</td>
-                <td>1553153</td>
-                <td>33125</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1852</td>
-                <td>4321</td>
-                <td class="biz-name">TAPO DAKTARI</td>
-                <td>1352648</td>
-                <td>22225</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>2552</td>
-                <td>4123</td>
-                <td class="biz-name">SCOOBY DOO</td>
-                <td>1888889</td>
-                <td>08985</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1352</td>
-                <td>3987</td>
-                <td class="biz-name">LILO & STITCH</td>
-                <td>1748579</td>
-                <td>98521</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>1872</td>
-                <td>3425</td>
-                <td class="biz-name">BETPARTNERS</td>
-                <td>1397899</td>
-                <td>65555</td>
-                <td></td>
-                <td>KES 30,000.00</td>
-                <td>11 June 2019</td>
-                <td>01 June 2019</td>
-                <!--<td></td>
-                <td><label class="label label-primary">Renewal Permit</label></td>-->
-                <td>
-                    <div class="actions row-actions">
-                        <!--				  printing-->
-                        <span><a href="betting/prnt-bet.html" target="new"><i class="actions__item zmdi zmdi-print" title="print this permit" ></a></i></span>
-                        <!--				  download-->
-<!--<!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->-->
-                        <!--				  view-->
-                        <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-eye text-gray" title="View license"></i></span></a>
-                        <!--				  delete-->
-                        <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
-                    </div>
-                    </div>
-
-                </td>
-
-            </tr>
-            </tbody>
-
-            </table>
-            </div>
-            </div>
-            </div>
-
-        </section>
-
-        <!--	datatable-->
-
-        <!--upload files-->
-        <div class="col-12 p-5 d-none">
-            <center>
-                <div class="card">
-                    <form>
-
-                    </form>
                 </div>
-                <div>
-                    <div class="col-8 m-5">
+
+                <div class="row">
+					<div class="col-lg-6 col-md-12">
+                        <div class="card height-calc23">
+                            <div class="card-body">
+                                <h4 class="card-title">Mothly revenue collections</h4>
+                                <h6 class="card-subtitle">The graph bellow shows the mothly revenue collections.</h6>
+									
+                                 <div id="monthly_rev" style="width:100%;"></div>
+									
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
                         <div class="card">
-                            <div class="card-header ">
-                                <div class="card-header pl-0">
-                                    <h2 class="card-title text-left">Recent Posts</h2>
-                                    <small class="card-subtitle text-left float-left">Venenatis portauam Inceptos ameteiam</small> </div>
-                                <div class="card-block">
-                                    <form class="dropzone drop-section-container p-5 mt-2 cursor-pointer" action="/file-upload" id="dropzone-upload">
-                                        <img class="img-fluid mb-4 drop-img" src="img/upload-bg.png">
-                                        <h3>Drag & Drop</h3>
-                                        <small class="card-subtitle">your files here, or browse</small>
+                            <div class="card-body">
+                                <h4 class="card-title">Active licences comparison</h4>
+                                <h6 class="card-subtitle">The graph below shows the comparisson and distribution of the several currently active county betting licences.</h6>
+									<div class="d-flex mb-3 graph-btns">
+										<button id="sort2" class="btn btn-outline-dark active">sort min - max</button>
+										<button id="sort3" class="btn btn-outline-dark  mx-3">sort max - min</button>
+										<button id="sort1" class="btn btn-outline-dark">sort A - Z</button>
+										
+									</div>
 
-                                        <input type="file" name="file" class="dropzone" />
-                                    </form>
-
-                                    <div class="upload-status-container mt-4">
-                                        <div class="row">
-                                            <div class="col-1"> <img src="img/excel (2).svg" class="icon"> </div>
-                                            <div class="col-11 d-flex flex-column pl-4"> <small class="text-left">file name</small> <small class="text-left">status</small> </div>
-                                        </div>
-                                    </div>
-                                    <div class="container-contact100-form-btn w-100 ">
-                                        <button class="contact100-form-btn w-100"> Upload file </button>
-                                    </div>
-                                </div>
+                                 <div id="container" style="width:100%;"></div>
+									
                             </div>
                         </div>
                     </div>
+					
+					
+
+                    
                 </div>
-            </center>
-        </div>
-        <!--upload files-->
 
-        <!--drag and drop files-->
-        <div class="col-12 p-5 drop-file-container vw-100 vh-100 animated d-none">
-            <div class="position-relative">
-                <span class="actions__item zmdi zmdi-close text-white float-right position-absolute close-droper" title="close form"></span>
-                <div class="card animated delete-row">
+                
 
-                    <div class="card-body">
-                        <div class="row">
+                <footer class="footer hidden-xs-down">
+                    <p>© Material Admin Responsive. All rights reserved.</p>
 
-                            <div class="col-12">
-                                <form class="drop-section-container cursor-pointer">
-                                    <input type="file" name="file" id="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" class="dropify" data-show-loader="true" />
-                                </form>
-                            </div>
-                        </div>
+                    <ul class="nav footer__nav">
+                        <a class="nav-link" href="#">Homepage</a>
+
+                        <a class="nav-link" href="#">Company</a>
+
+                        <a class="nav-link" href="#">Support</a>
+
+                        <a class="nav-link" href="#">News</a>
+
+                        <a class="nav-link" href="#">Contacts</a>
+                    </ul>
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
                     </div>
-
+                    <p>Sorry for the inconvenience!</p>
                 </div>
-            </div>
-        </div>
-        <!--delete item confirmation-->
-        <div class="col-12 p-5 notification-container vw-100 vh-100 animated d-none">
-            <div>
-                <div class="card animated delete-row">
-                    <div class="card-header bg-danger py-2 d-flex justify-content-between align-items-center align-content-center">
-                        <h2 class="card-title text-capitalize text-white m-0">Delete Record?</h2>
-                        <div class="actions text-white float-right close-delete">
-                            <a href="#" class="actions__item zmdi zmdi-close text-white m-0 p-0" title="close noification"></a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
+            <![endif]-->
 
-                            <div class="col-12">
-                                <img src="img/warning.svg" class=" icon float-left  mr-3">
-                                <h2 class="card-title mb-3 kev-capitalize font-weight-bold" id="record-name">Firm name</h2>
-                                <p>Are you sure you want to delete this record<br>You cant undo this action</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <a class="card-link close-delete" href="#">discard</a>
-                        <a class="card-link text-danger glow" href="#">delete</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--delete item confirmation-->
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
 
-        <!--
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
 
-footer
--->
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		<!--		high charts-->
+		<script src="js/highchart/highcharts.js"></script>
 
-        <footer class="footer hidden-xs-down">
-            <p class="text-capitalize">nairobi city county</p>
-            <p class="text-capitalize">Alcohol Drinks control and licensing bord</p>
-            <ul class="nav footer__nav">
-                <a class="nav-link" href="#">Homepage</a> <a class="nav-link" href="#">Company</a> <a class="nav-link" href="#">Support</a> <a class="nav-link" href="#">News</a> <a class="nav-link" href="#">Contacts</a>
-            </ul>
-        </footer>
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+		
+		<!--		chart scripts-->
+		<script>
+			var categories = ['Betting', 'Gaming(Casino)', 'Totalisator', 'Public Lottery', 'Prize Competition', 'pool tables', 'Amusement machines', 'Funfair/tombola'];
 
-    </section>
+Highcharts.chart('container', {
+  chart: {
+    type: 'bar',
+    events: {
+      load: function() {
+        var points = this.series[0].points,
+          chart = this,
+          newPoints = [];
 
-    <!--	scripts-->
-    <!-- Javascript -->
-    <!-- Vendors -->
-    <script src="vendors/jquery/jquery.min.js"></script>
-    <script src="vendors/popper.js/popper.min.js"></script>
-    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+        Highcharts.each(points, function(point, i) {
+          point.update({
+            name: categories[i]
+          }, false);
+          newPoints.push({
+            x: point.x,
+            y: point.y,
+            name: point.name
+          });
+        });
+        chart.redraw();
+        
+        $(document).ready(function(){
+        newPoints.sort(function(a, b) {
+            return a.y - b.y
+          });
 
-    <!-- Vendors: Data tables -->
-    <script src="vendors/flatpickr/flatpickr.min.js"></script>
-    <script src="vendors/dropzone/dropzone.min.js"></script>
-    <script src="vendors/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
-    <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
-    <script src="vendors/jszip/jszip.min.js"></script>
-    <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+          Highcharts.each(newPoints, function(el, i) {
+            el.x = i;
+          });
 
-    <!-- App functions and actions -->
-    <script src="js/app.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/dropify2.js"></script>
-    <script>
-        $('.dropify').dropify();
-    </script>
-</body>
+          chart.series[0].setData(newPoints, true, false, false);
+        });
 
+        // Sorting A - Z
+        $('#sort1').on('click', function() {
+          newPoints.sort(function(a, b) {
+            if (a.name < b.name)
+              return -1;
+            if (a.name > b.name)
+              return 1;
+            return 0;
+          });
+
+          Highcharts.each(newPoints, function(el, i) {
+            el.x = i;
+          });
+
+          chart.series[0].setData(newPoints, true, false, false);
+        });
+
+        // Sorting min - max
+        $('#sort2').on('click', function() {
+          newPoints.sort(function(a, b) {
+            return a.y - b.y
+          });
+
+          Highcharts.each(newPoints, function(el, i) {
+            el.x = i;
+          });
+
+          chart.series[0].setData(newPoints, true, false, false);
+        });
+
+        // Sorting max - min
+        $('#sort3').on('click', function() {
+          newPoints.sort(function(a, b) {
+            return b.y - a.y
+          });
+
+          Highcharts.each(newPoints, function(el, i) {
+            el.x = i;
+          });
+
+          chart.series[0].setData(newPoints, true, false, false);
+        });
+      }
+    }
+  },
+  title: {
+    text: 'Graph showing active licences by typ',
+    style: {
+      "font-family": "'Open Sans', sans-serif",
+      "color": "#373737",
+      "fontSize": "22px"
+    }
+  },
+	subtitle: {
+    text: 'For The Year 2020',
+    style: {
+      "font-family": "'Open Sans', sans-serif",
+      "color": "#0056ad",
+      "fontSize": "18px"
+    }
+  },
+  
+  xAxis: {
+    type: 'category'
+  },
+  yAxis: {
+   
+    title: {
+      text: 'Total number of licences'
+    }
+  },
+  tooltip: {
+    valuePrefix: 'KES '
+  },
+  legend: {
+    enabled: false,
+    reversed: true,
+    align: 'center',
+    verticalAlign: 'top',
+    itemDistance: 20,
+    itemStyle: {
+      "font-family": "'Open Sans', sans-serif",
+      "color": "#373737",
+      "fontSize": "16px",
+      "fontWeight": "normal"
+    }
+  },
+  plotOptions: {
+    series: {
+      stacking: 'normal',
+      dataLabels: {
+        enabled: true,
+        filter: {
+          property: 'percentage',
+          operator: '>',
+          value: 1
+        },
+        style: {
+          "font-family": "'Open Sans', sans-serif",
+          "color": "#ffffff",
+          "fontSize": "14px",
+          "fontWeight": "normal",
+          "textOutline": false
+        }
+      }
+    }
+  },
+  series: [{
+  type:'column',
+    name: 'Total Licenses: ',   
+    colorByPoint:true,
+    data: [3568, 5256, 4525,6556, 3325, 3165, 3358, 5238]
+  }]
+});
+			
+//			activating and deactivating graph buttons
+			
+			$('.graph-btns button').on('click', function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+
+
+$('#plain').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: false
+        },
+        subtitle: {
+            text: 'Plain'
+        }
+    });
+});
+
+$('#inverted').click(function () {
+    chart.update({
+        chart: {
+            inverted: true,
+            polar: false
+        },
+        subtitle: {
+            text: 'Inverted'
+        }
+    });
+});
+
+$('#polar').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: true
+        },
+        subtitle: {
+            text: 'Polar'
+        }
+    });
+});
+			
+			
+//			monthly revenue collections
+			Highcharts.chart('monthly_rev', {
+    chart: {
+        type: 'areaspline'
+    },
+    title: {
+        text: 'Monthly Revenue collections'
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 150,
+        y: 100,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+    },
+    xAxis: {
+        categories: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec'            
+        ],
+        plotBands: [{ // visualize the weekend
+            from: 4.5,
+            to: 6.5,
+            color: 'rgba(0, 66, 87, .2)'
+        }]
+    },
+    yAxis: {
+        title: {
+            text: 'Total Revenue'
+        }
+    },
+    tooltip: {
+        shared: true,
+        valuePrefix: ' KES '
+    },
+    credits: {
+        enabled: false
+    },
+    plotOptions: {
+        areaspline: {
+            fillOpacity: 0.5
+        }
+    },
+    series: [{
+        name: 'Revenue',
+        data: [32321,23561,3221321,1313531,3211332,212146,46456,456456,631265,56456,65465,652345]
+    }]
+});
+
+		</script>
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
 </html>
