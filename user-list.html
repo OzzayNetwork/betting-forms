@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+      
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <header class="header">
+    <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+      <div class="navigation-trigger__inner"> <i class="navigation-trigger__line"></i> <i class="navigation-trigger__line"></i> <i class="navigation-trigger__line"></i> </div>
+    </div>
+    <div class="header__logo hidden-sm-down">
+      <h1><a href="index.html">Revenuesure Reconmate</a></h1>
+    </div>
+  </header>
+  <aside class="sidebar">
+    <div class="scrollbar-inner">
+      <div class="user">
+        <div class="user__info" data-toggle="dropdown"> <img class="user__img" src="img/county.png" alt="">
+          <div>
+            <div class="user__name">Fname Lname</div>
+            <div class="user__email">email@email.com</div>
+          </div>
+        </div>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">View Profile</a> <a class="dropdown-item" href="#">Settings</a> <a class="dropdown-item" href="landing-page.html">Logout</a> </div>
+      </div>
+      <ul class="navigation text-capitalize">
+        <li class="navigation__active"><a href="#"><i class="zmdi zmdi-home d-none"></i> Betting Premises license</a></li>
+        <li><a href="#"><i class="zmdi zmdi-money d-none"></i>gamindg (casino)</a></li>
+        <li><a href="#"><i class="zmdi zmdi-swap d-none"></i> totalisator</a></li>
+        <li><a href="#"><i class="zmdi zmdi-smartphone-android d-none"></i> public lottery annual permit</a></li>
+        <li><a href="#"><i class="zmdi zmdi-apps d-none"></i>3 month public lottery</a></li>
+        <li><a href="#"><i class="zmdi zmdi-trending-up d-none"></i> prize competition</a></li>
+        <li><a href="pool.html"><i class="zmdi zmdi-star-outline d-none"></i>pool table</a></li>
+        <li><a href="#"><i class="zmdi zmdi-star-outline d-none"></i>amusement machines</a></li>
+        <li><a href="#"><i class="zmdi zmdi-star-outline d-none"></i>funfir/tombola</a></li>
+        <li class="mt-5"><a href="reconmate.html"><i class="zmdi zmdi-power"></i> logout</a></li>
+      </ul>
+    </div>
+  </aside>
+
+            <section class="content">
+                 <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mt-4 mx-4">Pool Table License</h4>
+                    <h6 class="card-subtitle mx-4">Table bellow shows a list of all pool table licenses</h6>
+                    <div class="row mx-4">
+                        <div class="col-12 p-0">
+                            <a href="forms.html" class="btn btn-primary btn-blue btn--icon-text ml-0 pl-0 text-white"><em class="zmdi zmdi-plus zmdi-hc-fw"></em> New License</a>
+                            <a href="forms.html" class="btn btn-secondary btn-success btn--icon-text mx-3"><i class="zmdi zmdi-refresh"></i> Renew License</a>
+                            <div class="p-0 m-0 float-right">
+                                <button class="btn btn-secondary btn-success btn--icon-text mx-3 upload-file"><i class="zmdi zmdi-file-add"></i> Upload File</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="data-table" class="table dataTable table-striped text-nowrap" role="grid">
+                            <thead class="thead-default text-capitalize">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>System Role</th>
+                                    <th>Created by</th>
+									 <th>Date created</th>
+									 <th>Last edited</th>
+                                    <th>Last  Log In</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tfoot class="text-capitalize">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>System Role</th>
+                                    <th>Created by</th>
+									 <th>Date created</th>
+									 <th>Last edited</th>
+                                    <th>Last  Log In</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Andrew</td>
+                                    <td>Mwangi</td>
+                                    <td>andrew@email.com</td>
+                                    <td>0745859658</td>
+                                    <td class="text-capitalize">system admin</td>
+                                    <td class="text-capitalize">Mark Kariuki</td>
+                                    <td>12/12/2020</td>
+                                    <td>12/12/2020</td>
+                                    <td>12/12/2020</td>
+                                    <!--<td></td>
+                                    <td><label class="label label-primary">Renewal Permit</label></td>-->
+                                    <td>
+                                        <div class="actions row-actions">
+                                            
+                                            <!--				  download--><!--                        <span><i class="actions__item zmdi zmdi-download blue" title="download permit copy"></i></span>-->
+                                            <!--				  view-->
+                                            <a href="betting/betting.html" target="blank"><span><i class="actions__item zmdi zmdi-edit text-gray" title="edit this account"></i></span></a>
+                                            <!--				  delete-->
+                                            <span class="delete-record"><i class="actions__item zmdi zmdi-delete text-danger" title="delete this record"></i></span>
+                                        </div>
+                    </div>
+
+                    </td>
+
+                    </tr>
+            				</tbody>
+
+            </table>
+            </div>
+            </div>
+            </div>
+
+                
+
+                <footer class="footer hidden-xs-down">
+                    <p>© Revenuesure. All rights reserved.</p>
+
+                   
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+           
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+        <!-- Vendors: Data tables -->
+        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+        <script src="vendors/jszip/jszip.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+
+</html>
